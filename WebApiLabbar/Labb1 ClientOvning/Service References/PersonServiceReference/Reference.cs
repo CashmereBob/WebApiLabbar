@@ -33,11 +33,11 @@ namespace Labb1_ClientOvning.PersonServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/EditAdress", ReplyAction="http://tempuri.org/IPerson/EditAdressResponse")]
         System.Threading.Tasks.Task<bool> EditAdressAsync(string adress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/EditTel", ReplyAction="http://tempuri.org/IPerson/EditTelResponse")]
-        bool EditTel(int tel);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IPerson/EditTel")]
+        void EditTel(int tel);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/EditTel", ReplyAction="http://tempuri.org/IPerson/EditTelResponse")]
-        System.Threading.Tasks.Task<bool> EditTelAsync(int tel);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IPerson/EditTel")]
+        System.Threading.Tasks.Task EditTelAsync(int tel);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/PrintFullName", ReplyAction="http://tempuri.org/IPerson/PrintFullNameResponse")]
         string PrintFullName();
@@ -103,11 +103,11 @@ namespace Labb1_ClientOvning.PersonServiceReference {
             return base.Channel.EditAdressAsync(adress);
         }
         
-        public bool EditTel(int tel) {
-            return base.Channel.EditTel(tel);
+        public void EditTel(int tel) {
+            base.Channel.EditTel(tel);
         }
         
-        public System.Threading.Tasks.Task<bool> EditTelAsync(int tel) {
+        public System.Threading.Tasks.Task EditTelAsync(int tel) {
             return base.Channel.EditTelAsync(tel);
         }
         

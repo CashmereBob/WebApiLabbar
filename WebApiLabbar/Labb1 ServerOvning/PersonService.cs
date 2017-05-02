@@ -34,10 +34,9 @@ namespace Labb1_ServerOvning
             return true;
         }
 
-        public bool EditTel(int tel)
+        public void EditTel(int tel)
         {
             person.Tel = tel;
-            return true;
         }
 
         public string PrintAdress()
@@ -72,8 +71,8 @@ namespace Labb1_ServerOvning
         bool EditLastName(string name);
         [OperationContract]
         bool EditAdress(string adress);
-        [OperationContract]
-        bool EditTel(int tel);
+        [OperationContract(IsOneWay = true)]
+        void EditTel(int tel);
         [OperationContract]
         string PrintFullName();
         [OperationContract]

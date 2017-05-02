@@ -49,13 +49,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="EditTelResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="EditTelResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="PrintFullName">
     <xs:complexType>
       <xs:sequence />

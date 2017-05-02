@@ -12,10 +12,12 @@ namespace Labb1_ClientOvning
         static void Main(string[] args)
         {
             var client = new PersonClient("BasicHttpBinding_IPerson");
-
+            var clientCalc = new CalculatorServiceReference.CalculatorClient("WSHttpBinding_ICalculator");
             Console.WriteLine(client.PrintAdress());
             Console.WriteLine(client.PrintFullName());
-
+            Console.WriteLine();
+            Console.WriteLine("Multiplicerar 50 med 100");
+            Console.WriteLine(clientCalc.Multiply(50, 100));
             Console.WriteLine();
 
             client.EditFirstName("Sven");
@@ -24,8 +26,6 @@ namespace Labb1_ClientOvning
             client.EditAdress("Smack");
             Console.WriteLine(client.PrintAdress());
             Console.WriteLine(client.PrintFullName());
-
-
 
             Console.ReadLine();
 
