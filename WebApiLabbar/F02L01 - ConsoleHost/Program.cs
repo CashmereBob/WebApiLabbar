@@ -14,9 +14,12 @@ namespace F02L01___ConsoleHost
         {
             ServiceHost host = new ServiceHost(typeof(EvalService));
 
-            host.AddServiceEndpoint(typeof(IEvalService), new BasicHttpBinding(), "http://localhost:8080/evals/basic");
+            TimeSpan timeout = new TimeSpan(0, 0, 2);
+
+            host.AddServiceEndpoint(typeof(IEvalService), new BasicHttpBinding { SendTimeout = timeout}, "http://localhost:8080/evals/basic");
             host.AddServiceEndpoint(typeof(IEvalService), new WSHttpBinding(), "http://localhost:8080/evals/ws");
             host.AddServiceEndpoint(typeof(IEvalService), new NetTcpBinding(), "net.tcp://localhost:8088/evals");
+            
 
             try
             {
