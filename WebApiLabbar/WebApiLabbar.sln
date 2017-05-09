@@ -34,6 +34,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F04L01 - GlobalWeather", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F04L02 - ProductsApp", "F04L02 - ProductsApp\F04L02 - ProductsApp.csproj", "{FEFD15CB-1B10-4B13-94CD-19164B79DD1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalServiceLibrary REST", "EvalServiceLibrary REST\EvalServiceLibrary REST.csproj", "{08B7431F-2AB4-4DCF-A7F0-1D75145FE89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalConsoleHost REST", "EvalConsoleHost REST\EvalConsoleHost REST.csproj", "{BACF3C99-CFB3-4CBB-9009-02CA9554EC23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalClient REST", "EvalClient REST\EvalClient REST.csproj", "{600A3F69-801E-40F4-9027-61F7FADA21BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +90,18 @@ Global
 		{FEFD15CB-1B10-4B13-94CD-19164B79DD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEFD15CB-1B10-4B13-94CD-19164B79DD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEFD15CB-1B10-4B13-94CD-19164B79DD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B7431F-2AB4-4DCF-A7F0-1D75145FE89D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B7431F-2AB4-4DCF-A7F0-1D75145FE89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B7431F-2AB4-4DCF-A7F0-1D75145FE89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B7431F-2AB4-4DCF-A7F0-1D75145FE89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACF3C99-CFB3-4CBB-9009-02CA9554EC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACF3C99-CFB3-4CBB-9009-02CA9554EC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACF3C99-CFB3-4CBB-9009-02CA9554EC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACF3C99-CFB3-4CBB-9009-02CA9554EC23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{600A3F69-801E-40F4-9027-61F7FADA21BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600A3F69-801E-40F4-9027-61F7FADA21BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600A3F69-801E-40F4-9027-61F7FADA21BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600A3F69-801E-40F4-9027-61F7FADA21BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

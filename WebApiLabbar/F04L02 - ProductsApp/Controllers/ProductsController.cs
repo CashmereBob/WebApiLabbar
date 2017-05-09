@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using F04L02___ProductsApp.Models;
+using Newtonsoft.Json.Linq;
 
 namespace F04L02___ProductsApp.Controllers
 {
@@ -48,14 +49,14 @@ namespace F04L02___ProductsApp.Controllers
             }
         }
 
-        [Route("addCategory/{name}")]
+        [Route("addCategory")]
         [System.Web.Http.AcceptVerbs("GET", "POST")]
         [System.Web.Http.HttpGet]
-        public IHttpActionResult AddCategory(string name)
+        public IHttpActionResult AddCategory(Category cat)
         {
             using (var ctx = new ProductEntities())
             {
-                ctx.Categorys.Add(new Category { Name = name });
+                ctx.Categorys.Add(cat);
                 ctx.SaveChanges();
 
                 var result = ctx.Categorys.ToList();
